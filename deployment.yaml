@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pythonflasksampleapp
+  labels:
+    app: sampleapp
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: sampleapp
+  template:
+    metadata:
+      labels:
+        app: sampleap
+    spec:
+      containers:
+        - name: pythonflasksampleapp
+          image: dankirkpatrick/pythonflasksampleapp:master
+          ports:
+            - containerPort: 5000

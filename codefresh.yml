@@ -24,3 +24,11 @@ steps:
     image: '${{MyAppDockerImage}}'
     commands:
       - python setup.py test
+  MyDeployment:
+    title: Deploying to Kubernetes
+    stage: deploy
+    type: deploy
+    kind: kubernetes
+    cluster: Decisio
+    namespace: default
+    file_path: ./deployment.yml
