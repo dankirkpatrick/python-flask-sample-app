@@ -12,7 +12,7 @@ spec:
   template:
     metadata:
       labels:
-        app: sampleap
+        app: sampleapp
     spec:
       containers:
         - name: pythonflasksampleapp
